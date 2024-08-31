@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            margin: 20px 0;
+        }
+        section {
+            margin-bottom: 50px;
+        }
+        .youtube-section {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #f9f9f9;
+        }
+        .youtube-section h2 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+        .youtube-video {
+            margin: 0 auto 20px;
+            max-width: 560px;
+        }
+        .youtube-link {
+            margin-top: 20px;
+        }
+        .youtube-button {
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .youtube-button:hover {
+            background-color: #cc0000;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-container div {
+            flex: 1;
+            margin: 20px;
+            min-width: 200px;
+        }
+        .footer-container h3 {
+            margin-bottom: 10px;
+        }
+        .footer-links ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-links ul li {
+            margin-bottom: 10px;
+        }
+        .footer-links ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .footer-links ul li a:hover {
+            text-decoration: underline;
+        }
+        .footer-social a {
+            display: block;
+            color: white;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        .footer-social a i {
+            margin-right: 8px;
+        }
+        .footer-social a:hover {
+            text-decoration: underline;
+        }
+        .footer-bottom {
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            .footer-container div {
+                margin: 10px 0;
+            }
+            .youtube-video iframe {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .youtube-section h2 {
+                font-size: 1.5em;
+            }
+            .youtube-button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sunny's Portfolio</h1>
+    </header>
+    
+    <div class="container">
+        <section id="home">
+            <h2>Welcome to My Portfolio</h2>
+            <p>Hello! I'm Sunny, a frontend web developer and content creator. Explore my work and get to know more about my skills and projects.</p>
+        </section>
+
+        <section id="youtube" class="youtube-section">
+            <h2>My YouTube Channel</h2>
+            <div class="youtube-video">
+                <iframe width="560" height="315" src="morning_routine.jpg" 
+                    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen></iframe>
+            </div>
+            <div class="youtube-link">
+                <a href="https://www.youtube.com/@SunnySaurya76/videos" target="_blank">
+                    <button class="youtube-button">Visit My YouTube Channel</button>
+                </a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>About Me</h3>
+                <p>Hi, I'm Sunny, a frontend web developer and content creator passionate about coding, design, and self-development. Explore my projects and blog to know more about my journey.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <h3>Follow Me</h3>
+                <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://twitter.com/yourusername" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="https://www.linkedin.com/in/yourusername/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="https://www.youtube.com/channel/yourchannel" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Sunny | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/ScrollTrigger.min.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from(".youtube-section", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            scrollTrigger: {
+                trigger: ".youtube-section",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none"
+            }
+        });
+
+        gsap.from(".footer-container div", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.3,
+            scrollTrigger: {
+                trigger: ".footer-container",
+                start: "top 80%",
+                end: "bottom 20%",
+                toggleActions: "play none none none"
+            }
+        });
+    </script>
+</body>
+</html>
